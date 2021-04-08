@@ -19,7 +19,6 @@ Bundler.require(*Rails.groups)
 
 module RunteqNormal
   class Application < Rails::Application
-
     config.generators do |g|
       g.assets  false
       g.test    false
