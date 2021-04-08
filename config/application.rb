@@ -23,7 +23,7 @@ module RunteqNormal
     config.generators do |g|
       g.assets  false
       g.test    false
-      g.helper   true
+      g.helper  false
     end
 
     # Initialize configuration defaults for originally generated Rails version.
