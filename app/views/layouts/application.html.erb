@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RunteqNormal</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <title>Tutorial</title>
+      <%= stylesheet_link_tag    "application" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
   </head>
-
   <body>
-    <%= render "shared/header" %>
+
+  <div id="nav">
+    <% if logged_in? %>
+      <%= render "shared/header" %>
+    <% else %>
+      <%= render "shared/before_login_header" %>
+    <% end %>
+  </div>
+  <div>
+    <p id="notice"><%= flash[:notice] %></p>
+    <p id="alert"><%= flash[:alert] %></p>
+  </div>
     <%= yield %>
     <%= render "shared/footer" %>
+
   </body>
 </html>
