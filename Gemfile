@@ -68,3 +68,5 @@ gem 'font-awesome-sass', '~> 5.12.0'
 
 gem 'sorcery'
 gem 'pry-byebug', group: :development
+
+gem 'rails-i18n', '~> 5.1' 
