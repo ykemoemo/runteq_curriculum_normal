@@ -1,14 +1,24 @@
 ja:
-  views:
-    users:
-      new:
-        title: 'ユーザー登録'
-        login: 'ログインページへ'
-        submit: '登録'
-    user_sessions:
-      new:
-        title: 'ログイン'
-        signup: '登録ページへ'
-        forget_password: 'パスワードをお忘れの方はこちら'
-        email: 'メールアドレス'
-        password: 'パスワード'
+   defaults:
+     login: 'ログイン'
+     register: '登録'
+     logout: 'ログアウト'
+   users:
+     new:
+       title: 'ユーザー登録'
+       to_login_page: 'ログインページへ'
+   user_sessions:
+     new:
+       title: 'ログイン'
+       to_register_page: '登録ページへ'
+       password_forget: 'パスワードをお忘れの方はこちら'
+   boards:
+     index:
+       title: '掲示板一覧'
+     new:
+       title: '掲示板作成'
+     bookmarks:
+       title: 'ブックマーク一覧'
+   profiles:
+     show:
+       title: 'プロフィール'
