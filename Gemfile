@@ -70,3 +70,4 @@ gem 'sorcery'
 gem 'pry-byebug', group: :development
 
 gem 'rails-i18n', '~> 5.1'
+gem 'draper'
