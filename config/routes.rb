@@ -7,5 +7,4 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create]
   resources :boards, only: %i[index create new]
-  post 'boards/new', to: 'boards#create'
 end
