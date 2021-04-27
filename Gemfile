@@ -75,4 +75,7 @@ gem 'draper'
 gem 'pry-rails'
 
 gem 'carrierwave'
+<<<<<<< HEAD
 gem 'mini_magick'
+=======
+>>>>>>> [Add] board image upload function
