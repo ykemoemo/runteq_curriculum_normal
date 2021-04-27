@@ -13,5 +13,5 @@ ja:
       board:
          title: 'タイトル'
          body: '本文'
-         thumbnail: 'サムネイル'  
+         board_image: 'サムネイル'  
     
