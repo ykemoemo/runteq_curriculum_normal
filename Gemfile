@@ -76,6 +76,10 @@ gem 'pry-rails'
 
 gem 'carrierwave'
 <<<<<<< HEAD
-gem 'mini_magick'
+<<<<<<< HEAD
+
 =======
 >>>>>>> [Add] board image upload function
+=======
+
+>>>>>>> [Add] comment function
