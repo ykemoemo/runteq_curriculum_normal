@@ -75,11 +75,3 @@ gem 'draper'
 gem 'pry-rails'
 
 gem 'carrierwave'
-<<<<<<< HEAD
-<<<<<<< HEAD
-gem 'mini_magick'
-=======
->>>>>>> [Add] board image upload function
-=======
-gem 'mini_magick'
->>>>>>> [Add] comment function
