@@ -26,10 +26,6 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-<<<<<<< HEAD
-    params.require(:board).permit(:title, :body, :board_image)
-=======
     params.require(:board).permit(:title, :body, :board_image, :board_image_cache)
->>>>>>> [Add] board image upload function
   end
 end
