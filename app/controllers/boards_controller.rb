@@ -17,10 +17,29 @@ class BoardsController < ApplicationController
     end
   end
 
+  def edit
+    @board = Board.find(params[:id])
+  end
+
   def show
     @comment = Comment.new
     @board = Board.find(params[:id])
     @comments = @board.comments.includes(:user).order(created_at: :desc)
+  end
+
+  def update
+    @board = Board.find(params[:id])
+    if @board.update(board_params)
+      redirect_to board_path, success: '掲示板を更新しました'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @board = Board.find(params[:id])
+    @board.destroy!
+    redirect_to boards_path, success: '掲示板を削除しました'
   end
 
   private
