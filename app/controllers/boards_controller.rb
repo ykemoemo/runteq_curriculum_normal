@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+  before_action :ensure_user, only: [:edit, :update, :destroy]
+
   def index
     @boards = Board.all.includes(:user).order(created_at: :desc)
   end
@@ -46,5 +48,9 @@ class BoardsController < ApplicationController
 
   def board_params
     params.require(:board).permit(:title, :body, :board_image, :board_image_cache)
+  end
+
+  def ensure_user
+    @board = current_user.boards.find(params[:id])
   end
 end
