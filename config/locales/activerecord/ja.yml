@@ -16,5 +16,6 @@ ja:
          body: '本文'
          board_image: 'サムネイル'  
       comment:
-         body: 'コメント'   
+         body: 'コメント'
+         
     

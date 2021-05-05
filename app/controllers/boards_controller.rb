@@ -32,8 +32,9 @@ class BoardsController < ApplicationController
   def update
     @board = Board.find(params[:id])
     if @board.update(board_params)
-      redirect_to board_path, success: '掲示板を更新しました'
+      redirect_to board_path, success: t('.success')
     else
+      flash.now[:danger] = t('.fail')
       render :edit
     end
   end

@@ -4,9 +4,12 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     post: '投稿'
-    sign_up: '登録する'
     message:
        require_login: 'ログインしてください'
+  helpers:
+    submit:
+      create: "登録する"
+      update: "更新する"        
   users:
     new:
       title: 'ユーザー登録'
@@ -33,7 +36,10 @@ ja:
     show:
       title: '掲示板詳細'
     edit:
-      title: '掲示板編集'  
+      title: '掲示板編集'
+    update:
+      success: '掲示板を更新しました'
+      fail: '掲示板を更新できませんでした'
     create:
       success: '掲示板を作成しました'
       fail: '掲示板を作成できませんでした'
