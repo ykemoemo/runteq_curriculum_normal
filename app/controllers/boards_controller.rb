@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :ensure_user, only: %i[:edit, :destroy]
+  before_action :ensure_user, only: %i[edit update destroy]
 
   def index
     @boards = Board.all.includes(:user).order(created_at: :desc)
