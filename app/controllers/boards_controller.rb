@@ -42,7 +42,11 @@ class BoardsController < ApplicationController
   def destroy
     @board = Board.find(params[:id])
     @board.destroy!
-    redirect_to boards_path, success: '掲示板を削除しました'
+    redirect_to boards_path, success: t('.success')
+  end
+
+  def bookmarks
+    @bookmark_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc)
   end
 
   private
