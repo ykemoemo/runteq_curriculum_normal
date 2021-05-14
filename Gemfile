@@ -75,3 +75,5 @@ gem 'draper'
 gem 'pry-rails'
 
 gem 'carrierwave'
+
+gem 'kaminari'
