@@ -77,3 +77,5 @@ gem 'pry-rails'
 gem 'carrierwave'
 
 gem 'kaminari'
+
+gem 'ransack'
