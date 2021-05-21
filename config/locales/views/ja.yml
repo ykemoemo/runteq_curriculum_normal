@@ -6,13 +6,14 @@ ja:
     post: '投稿'
     search_word: '検索ワード'
     edit: '編集'
+    new: '送信'
     message:
        require_login: 'ログインしてください'
        confirm: '削除しますか？'
   helpers:
     submit:
       create: "登録する"
-      update: "更新する"        
+      update: "更新する"     
   users:
     new:
       title: 'ユーザー登録'
@@ -71,4 +72,14 @@ ja:
     update:
       success: 'ユーザーを更新しました'
       fail: 'ユーザーを更新できませんでした'
+  password_resets:
+    edit:
+      title: 'パスワードリセット申請'
+    new:
+      title: 'パスワードリセット申請'
+    update:
+      success: 'パスワードを変更しました'
+      fail: 'パスワードの変更に失敗しました'
+    create:
+      success: 'パスワードリセット手順を送信しました'
       
