@@ -82,3 +82,5 @@ gem 'kaminari'
 gem 'ransack'
 
 gem 'config'
+
+gem 'enum_help'

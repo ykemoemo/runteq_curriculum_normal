@@ -1,0 +1,9 @@
+<%= search_form_for @q, url: url do |f| %>
+    <div class="input-group mb-3">
+      <%= f.search_field :first_name_or_last_name_cont, class: 'form-control', placeholder: '名前' %>
+      <%= f.select :role_eq, User.roles_i18n.invert.map{|key, value| [key, User.roles[value]]}, { include_blank: '指定なし' }, class: 'form-control' %>               
+      <div class="input-group-append">
+        <%= f.submit class: 'btn btn-primary' %>
+      </div>
+    </div>
+<% end %>

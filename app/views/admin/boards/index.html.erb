@@ -1,0 +1,40 @@
+<% content_for(:title, '掲示板一覧') %>
+<table class="table table-striped">
+  <!-- 検索フォーム -->
+  <%= render 'search_form', url: admin_boards_path %>
+
+  <!-- 掲示板一覧 -->
+  <h1><%= '掲示板一覧' %></h1>
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">タイトル</th>
+      <th scope="col">作成者</th>
+      <th scope="col">作成日時</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @boards.each do |board| %>
+      <tr>
+        <th scope="row"><%=board.id%></th>
+        <td>
+          <%= link_to admin_board_path(board) do %>
+            <%=board.title%>
+          <% end %>
+        </td>
+        <td><%=board.user.decorate.full_name%></td>
+        <td><%= l board.created_at, format: :long %></td>
+        <td>
+          <%= link_to edit_admin_board_path(board), id: "button-edit-#{board.id}" do %>
+            <button type="button" class="btn btn-outline-success">編集</button>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to admin_board_path(board), method: :delete, data: { confirm: t('defaults.message.confirm') }, id: "button-delete-#{board.id}" do %>
+          　　<button type="button" class="btn btn-outline-danger">削除</button>
+          <% end %>
+        </td>  
+      </tr>
+    <% end %>
+  </tbody>
+</table>
